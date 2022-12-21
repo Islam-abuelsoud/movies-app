@@ -1,0 +1,12 @@
+<div class="row my-5">
+    <div class="col-md-3 ">
+        <img [src]="imgpre+tvDetail.poster_path" alt="" class="w-100">
+    </div>
+    <div class="col-md-9">
+        <h2 class="bolder">{{tvDetail.name}}</h2>
+        <p class="text-muted p-2">{{tvDetail.overview}}</p>
+        <ul>
+            <li *ngFor="let g of tvDetail.genres "> {{g.name}}</li>
+        </ul>
+    </div>
+</div>

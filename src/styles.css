@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat+Alternates:ital,wght@0,200;1,200&family=Old+Standard+TT&display=swap');
+body
+{
+    background-color:  #131722 !important;
+    color:#fff !important;
+    font-family: 'Montserrat Alternates', 'sans-serif' !important;
+
+}
+
+
+.vote{
+    background-color: #131722 !important ;
+}
+.brdr{
+    width: 1px;
+    height: 1px;
+    background-color: #a8a8a83d;
+}

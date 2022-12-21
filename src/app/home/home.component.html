@@ -1,0 +1,73 @@
+<div class="row">
+    <div class="col-md-4 py-4">
+        <div class="brdr w-25 my-1"></div>
+        <h1 class="my-5 fw-bolder">
+            Trending <br>
+            movies <br>
+            to watch now
+        </h1>
+        <h4 class="text-muted mt-5">most wathced movies this week..</h4>
+        <div class="brdr w-100 my-3"></div>
+    </div>
+    <!--  -->
+    <div *ngFor="let movie of trendingMovies" class="col-md-2">
+        <div class="movie position-relative">
+            <a [routerLink]="['/movedetails',movie.id]" class="text-decoration-none text-white">
+                <img [src]="imgpre+movie.poster_path" class="w-100" alt="">
+                <h3 class="h5 fw-bolder m-2 mb-4">{{movie.title}}</h3>
+                <div class="vote wf-bolder p-2 position-absolute top-0 end-0">
+                    {{movie.vote_average.toFixed(1)}}
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<!--  -->
+<!--  -->
+<div class="row my-5">
+    <div class="col-md-4 py-4">
+        <div class="brdr w-25 my-1"></div>
+        <h1 class="my-5 fw-bolder">
+            Trending <br>
+            TV shows <br>
+            to watch now
+        </h1>
+        <h4 class="text-muted mt-5">most wathced TVs this week..</h4>
+        <div class="brdr w-100 my-3"></div>
+    </div>
+    <!--  -->
+    <div *ngFor="let TV of trendingTV" class="col-md-2">
+        <div class="movie position-relative">
+            <a [routerLink]="['/tvDetails',TV.id]" class="text-decoration-none text-white">
+                <img [src]="imgpre+TV.poster_path" class="w-100" alt="">
+                <h3 class="h5 fw-bolder m-2 mb-4">{{TV.name}}</h3>
+                <div class="vote wf-bolder p-2 position-absolute top-0 end-0">
+                    {{TV.vote_average.toFixed(1)}}
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<!--  -->
+<!--  -->
+<div class="row my-5">
+    <div class="col-md-4 py-4">
+        <div class="brdr w-25 my-1"></div>
+        <h1 class="my-5 fw-bolder">
+            Trending <br>
+            people <br>
+            to watch now
+        </h1>
+        <h4 class="text-muted mt-5">most Trending people this week..</h4>
+        <div class="brdr w-100 my-3"></div>
+    </div>
+    <!--  -->
+    <div *ngFor="let person of trendingPerson" class="col-md-2">
+        <a [routerLink]="['/person_detail',person.id]" class="text-decoration-none text-white">
+            <div class="movie position-relative">
+                <img [src]="imgpre+person.profile_path" class="w-100" alt="">
+                <h3 class="h5 fw-bolder m-2 mb-4">{{person.name}}</h3>
+            </div>
+        </a>
+    </div>
+</div>
